@@ -12,4 +12,11 @@ func main() {
 
 	fmt.Println(lasagna_master.Quantities(layers))
 
+	friendsList := []string{"noodles", "sauce", "mozzarella", "kampot pepper"}
+	myList := []string{"noodles", "meat", "sauce", "mozzarella","?"}
+
+	lasagna_master.AddSecretIngredient(friendsList, myList)
+	
+	fmt.Println(myList)
+
 }

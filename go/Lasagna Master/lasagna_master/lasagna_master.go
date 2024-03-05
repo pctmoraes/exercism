@@ -26,3 +26,10 @@ func Quantities(layers []string) (int, float64) {
 
 	return noodles_qty, sauce_qty
 }
+
+func AddSecretIngredient(friendsList []string, myList []string) {
+	friendLastIngredientIdx := len(friendsList) - 1
+	myLastIngredientIdx := len(myList) - 1
+
+	myList[myLastIngredientIdx] = friendsList[friendLastIngredientIdx]
+}
