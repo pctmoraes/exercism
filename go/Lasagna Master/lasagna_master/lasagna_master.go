@@ -33,3 +33,16 @@ func AddSecretIngredient(friendsList []string, myList []string) {
 
 	myList[myLastIngredientIdx] = friendsList[friendLastIngredientIdx]
 }
+
+func ScaleRecipe(amountsNeededForTwo []float64, numOfPortions int) []float64 {
+	var amountsNeededforNumOfPortions []float64
+
+	for _, amount := range amountsNeededForTwo {
+		amountsNeededforNumOfPortions = append(
+			amountsNeededforNumOfPortions,
+			(amount * float64(numOfPortions)) / 2.0,
+		)
+	}
+
+	return amountsNeededforNumOfPortions
+}

@@ -19,4 +19,8 @@ func main() {
 	
 	fmt.Println(myList)
 
+	quantities := []float64{ 1.2, 3.6, 10.5 }
+	scaledQuantities := lasagna_master.ScaleRecipe(quantities, 4)
+	fmt.Println(scaledQuantities)
+
 }
