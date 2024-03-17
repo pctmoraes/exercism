@@ -6,6 +6,9 @@ import (
 )
 
 func main() {
-	schedule := booking.Schedule("7/25/2019 13:45:00")
+	dateAsString := "7/25/2019 13:45:00"
+	schedule := booking.Schedule(dateAsString)
 	fmt.Println(schedule)
+
+	fmt.Println(booking.HasPassed(dateAsString))
 }

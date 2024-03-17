@@ -10,23 +10,16 @@ func Schedule(date string) time.Time {
 	return parsedTime
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // HasPassed returns whether a date has passed.
 func HasPassed(date string) bool {
-	panic("Please implement the HasPassed function")
+	now := time.Now()
+	dateAsTime := Schedule(date)
+	
+	if dateAsTime.After(now) {
+		return false
+	} else {
+		return true
+	} 
 }
 
 // IsAfternoonAppointment returns whether a time is in the afternoon.
